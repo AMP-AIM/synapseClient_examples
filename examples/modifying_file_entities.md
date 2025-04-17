@@ -18,10 +18,10 @@ for synID in files.id:
   entity = syn.get(synID, downloadFile = False)
   
   # move entity location in synapse
-  entity.parentId = "folder synID""
+  entity.parentId = "folder synID"
   
   # rename file
-  entity.name = "new name""
+  entity.name = "new name"
   
   # push changes to synapse, disable automatic entity version bump
   entity = syn.store(entity, forceVersion = False)
