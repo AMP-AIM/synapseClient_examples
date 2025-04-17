@@ -35,11 +35,15 @@ for synID in files.id:
 
 the above examples explicitly do not force a version bump on the entity. If a 
 version bump is desired it is best practice to also include a version comment to 
-inform others of what changes have been applied, for example:
+inform others of what changes have been applied. This should always be done when the data/content 
+of the file has been updated, for example:
 
 ```python
+# update file data/content
+entity.path = "local/path/to/new/file/content"
+
 # add version comment
-entity.properties["versionComment"] = "this is my version comment"
+entity.properties["versionComment"] = "update values of ABC using new calculation standard"
   
 # save changes to synapse, allow default version bump
 entity = syn.store(entity)
